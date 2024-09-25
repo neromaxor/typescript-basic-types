@@ -7,30 +7,44 @@ import { DayOfWeek, isWeekend } from "./basics/5";
 import { page1, page2 } from "./basics/7";
 import { mango, poly } from "./basics/6.ts";
 import { fetchData } from "./generics/1.ts";
+import { compare } from "./generics/2.ts";
+import { merge } from "./generics/3.ts";
 
 function App() {
-  console.log(mango);
-  console.log(poly);
-  runTask3();
-  console.log(`Name: ${person[0]}, Age: ${person[1]}`);
-  runTask1();
+  // console.log(mango);
+  // console.log(poly);
+  // runTask3();
+  // console.log(`Name: ${person[0]}, Age: ${person[1]}`);
+  // runTask1();
 
-  showMessage("Hello from TypeScript!"); // Повідомлення в консоль
-  console.log("Сума: ", calc(10, 20)); // Обчислення суми
+  // showMessage("Hello from TypeScript!"); // Повідомлення в консоль
+  // console.log("Сума: ", calc(10, 20)); // Обчислення суми
 
-  console.log(page1, page2);
+  // console.log(page1, page2);
 
-  const today = DayOfWeek.Saturday;
-  const weekendStatus = isWeekend(today)
-    ? "Yes, it's a weekend!"
-    : "No, it's a weekday.";
-  console.log(weekendStatus);
+  // const today = DayOfWeek.Saturday;
+  // const weekendStatus = isWeekend(today)
+  //   ? "Yes, it's a weekend!"
+  //   : "No, it's a weekday.";
+  // console.log(weekendStatus);
 
-  fetchData<{ name: string; age: number }>(
-    "https://jsonplaceholder.typicode.com/users/1"
-  )
-    .then((data) => console.log(data.name, data.age))
-    .catch((error) => console.error(error));
+  // fetchData<{ name: string; age: number }>(
+  //   "https://jsonplaceholder.typicode.com/users/1"
+  // )
+  //   .then((data) => console.log(data.name, data.age))
+  //   .catch((error) => console.error(error));
+
+  const topObject = { name: "Top", color: "Red" };
+  const bottomObject = { position: 2, weight: 100 };
+
+  const result = compare(topObject, bottomObject);
+  console.log(result);
+
+  const objA = { name: "Alice", age: 25 };
+  const objB = { city: "Wonderland", profession: "Adventurer" };
+
+  const mergedObject = merge(objA, objB);
+  console.log(mergedObject);
 
   // customError();
 
