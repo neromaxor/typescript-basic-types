@@ -9,6 +9,10 @@ import { mango, poly } from "./basics/6.ts";
 import { fetchData } from "./generics/1.ts";
 import { compare } from "./generics/2.ts";
 import { merge } from "./generics/3.ts";
+import { RoleDescription } from "./generics/5.ts";
+import { formData } from "./generics/6.ts";
+
+import { updateUserProfile, currentProfile } from "./generics/4";
 
 function App() {
   // console.log(mango);
@@ -34,18 +38,25 @@ function App() {
   //   .then((data) => console.log(data.name, data.age))
   //   .catch((error) => console.error(error));
 
-  const topObject = { name: "Top", color: "Red" };
-  const bottomObject = { position: 2, weight: 100 };
+  // const topObject = { name: "Top", color: "Red" };
+  // const bottomObject = { position: 2, weight: 100 };
 
-  const result = compare(topObject, bottomObject);
-  console.log(result);
+  // const result = compare(topObject, bottomObject);
+  // console.log(result);
 
-  const objA = { name: "Alice", age: 25 };
-  const objB = { city: "Wonderland", profession: "Adventurer" };
+  // const objA = { name: "Alice", age: 25 };
+  // const objB = { city: "Wonderland", profession: "Adventurer" };
 
-  const mergedObject = merge(objA, objB);
-  console.log(mergedObject);
+  // const mergedObject = merge(objA, objB);
+  // console.log(mergedObject);
 
+  // const updatedProfile = updateUserProfile(currentProfile, {
+  //   email: "john.newemail@example.com",
+  //   password: "newpassword456",
+  // });
+  // console.log("Updated Profile:", updatedProfile);
+  // console.log(RoleDescription);
+  console.log(formData);
   // customError();
 
   return (
